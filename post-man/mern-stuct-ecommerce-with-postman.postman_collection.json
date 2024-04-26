@@ -1,0 +1,611 @@
+{
+	"info": {
+		"_postman_id": "419a7bc0-4461-49ba-a745-34ad93de0155",
+		"name": "mern-stuct-ecommerce-with-postman",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28423782"
+	},
+	"item": [
+		{
+			"name": "user api",
+			"item": [
+				{
+					"name": "welcome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users/show-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"show-all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Rahat Kabir",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "raju@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Rahatul123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "01790000000",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Pabna",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/process-register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"process-register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user-verify-account",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiTUQgUkFIQVRVTCBSQUJCSSBSQUpVIiwiZW1haWwiOiJsZWFybndpdGhmYWlyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiQFJhaGF0dWwxMjMiLCJwaG9uZSI6IjAxNzkwMjI0OTUwIiwiYWRkcmVzcyI6IkhhdGliYW5kaGEiLCJpYXQiOjE2OTkwOTY4MDksImV4cCI6MTY5OTA5NzQwOX0.WkOYlaguYn7-YsejsD92LFC_G45kyf8HB0p7PwdTX40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/verify/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFoYXQgS2FiaXIiLCJlbWFpbCI6InJhanVAZ21haWwuY29tIiwicGFzc3dvcmQiOiJAUmFoYXR1bDEyMyIsInBob25lIjoiMDE3OTAwMDAwMDAiLCJhZGRyZXNzIjoiUGFibmEiLCJpYXQiOjE3MDAwMjUxNjcsImV4cCI6MTcwMDAyNjA2N30.cAwgbbw2SuAzgtWRTm6R6G8ugVLfFHpPsZgLuHdK4PQ",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"verify",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiUmFoYXQgS2FiaXIiLCJlbWFpbCI6InJhanVAZ21haWwuY29tIiwicGFzc3dvcmQiOiJAUmFoYXR1bDEyMyIsInBob25lIjoiMDE3OTAwMDAwMDAiLCJhZGRyZXNzIjoiUGFibmEiLCJpYXQiOjE3MDAwMjUxNjcsImV4cCI6MTcwMDAyNjA2N30.cAwgbbw2SuAzgtWRTm6R6G8ugVLfFHpPsZgLuHdK4PQ"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/show/6554517c2c32942e3c1bdc79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"show",
+								"6554517c2c32942e3c1bdc79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "users update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Update Rahatul ",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "imran@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Rahatul123",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0187000",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "uJashar",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users/update/6554517c2c32942e3c1bdc79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"update",
+								"6554517c2c32942e3c1bdc79"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user delete",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/users/delete/6554517c2c32942e3c1bdc79",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"users",
+								"delete",
+								"6554517c2c32942e3c1bdc79"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seed",
+			"item": [
+				{
+					"name": "seed users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/reset-users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"reset-users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "user login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "learnwithfair@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Rahatul123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "oldPassword",
+									"value": "@Rahatul123",
+									"type": "text"
+								},
+								{
+									"key": "newPassword",
+									"value": "@Rahatul12",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "@Rahatul12",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/change-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Passowrd",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "newPassword",
+									"value": "@Rahatul123",
+									"type": "text"
+								},
+								{
+									"key": "confirmPassword",
+									"value": "@Rahatul123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTU0NTE3YjJjMzI5NDJlM2MxYmRjNzgiLCJlbWFpbCI6ImxlYXJud2l0aGZhaXJAZ21haWwuY29tIiwiaWF0IjoxNzAwMDI0ODA2LCJleHAiOjE3MDAwMjU3MDZ9.XGK2AZrvuTHOBeKSBHAlpMwupxbg9KluGSx-xM7Hu2M",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"reset-password",
+								"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTU0NTE3YjJjMzI5NDJlM2MxYmRjNzgiLCJlbWFpbCI6ImxlYXJud2l0aGZhaXJAZ21haWwuY29tIiwiaWF0IjoxNzAwMDI0ODA2LCJleHAiOjE3MDAwMjU3MDZ9.XGK2AZrvuTHOBeKSBHAlpMwupxbg9KluGSx-xM7Hu2M"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "learnwithfair@gmail.com",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Category create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Laptop",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/categories/category/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"category",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Category Show All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/categories/category/show-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"categories",
+								"category",
+								"show-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Test12",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Test Description",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "200",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sold",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "shipping",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "cat_id",
+									"value": "6550e770f7a3fa71e2731a81",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/MD RAHATUL RABBI/Desktop/rahatul rabbi.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/admin/products/product/create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"product",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Products Show All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/admin/products/product/show-all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"admin",
+								"products",
+								"product",
+								"show-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "api testing",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
