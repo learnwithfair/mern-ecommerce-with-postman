@@ -82,12 +82,13 @@ CLIENT_URL=http://localhost:3000 (Server URL)
 ### API-> resources/js/secret.js
 
 ```bash
-const mongodbURL = "mongodb://localhost:27017/MernDB";(For Local Database)
+const mongodbURL = "mongodb://localhost:27017/database-name";(For Local Database)
 ```
 
-## Step-2 Run Command in another Terminal (server)
+## Step-2 Run Command in the root directory
 
 ```bash
+npm install --force
 npm run dev
 ```
 
